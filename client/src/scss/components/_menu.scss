@@ -1,0 +1,31 @@
+.menu-component {
+    font-size: 1.6rem;
+
+    .input {
+        box-shadow: 0 0 4px 4px rgba($gray, .1);
+        width: calc(100% - 2rem);
+    }
+
+    .filter-name {
+        margin: 1rem 0;
+        display: block;
+        color: $gray;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .label-wrapper {
+        margin: 1.4rem 0;
+        
+        .label {
+            .check-input,
+            span {
+                vertical-align: middle;
+            }
+    
+            .check-input {
+                margin-right: .6rem;
+            }
+        }
+    }
+}

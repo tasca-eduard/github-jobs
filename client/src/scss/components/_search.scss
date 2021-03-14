@@ -1,0 +1,22 @@
+.search-component {
+    padding: .5rem;
+    background: $white;
+    border-radius: 4px;
+    max-width: 80rem;
+    width: 100%;
+    margin: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    .input {
+        width: calc(100% - .5rem);
+        margin-right: .5rem;
+    }
+
+    .button {
+        max-width: 10rem;
+        width: 100%;
+        padding: 1.4rem 1rem;
+        border: none;
+    }
+}

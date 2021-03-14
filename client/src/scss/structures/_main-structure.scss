@@ -1,0 +1,36 @@
+.main-structure {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    .menu-component {
+        width: calc(40% - 2rem);
+        margin-right: 2rem;
+    }
+
+    .list {
+        width: 60%;
+    }
+
+    @media (max-width: 768px) {
+        .menu-component,
+        .list {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-component {
+            margin-right: -2rem;
+
+            .label-wrapper {
+                display: inline-block;
+                margin: 0 2rem;
+            }
+        }
+
+        .list {
+            margin-top: 2rem;
+        }
+    }
+}
