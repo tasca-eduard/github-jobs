@@ -1,0 +1,46 @@
+{
+    "jobs": [
+        {
+            "id": 1,
+            "name": "Company name",
+            "location": "New York",
+            "position": "Front End Developer",
+            "norm": "Full Time"
+        },
+        {
+            "id": 2,
+            "name": "Company name",
+            "location": "Alabama",
+            "position": "Back End Developer",
+            "norm": "Part time"
+        },
+        {
+            "id": 3,
+            "name": "Company name",
+            "location": "California",
+            "position": "Dev Ops",
+            "norm": "Full Time"
+        },
+        {
+            "id": 4,
+            "name": "Company name",
+            "location": "Texas",
+            "position": "Web Designer",
+            "norm": "Full Time"
+        },
+        {
+            "id": 5,
+            "name": "Company name",
+            "location": "New York",
+            "position": "Back End Developer",
+            "norm": "Full Time"
+        },
+        {
+            "id": 6,
+            "name": "Company name",
+            "location": "California",
+            "position": "Front End Developer",
+            "norm": "Part Time"
+        }
+    ]
+}
