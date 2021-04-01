@@ -13,18 +13,71 @@
         text-transform: uppercase;
         font-weight: 700;
     }
-
-    .label-wrapper {
-        margin: 1.4rem 0;
-        
-        .label {
-            .check-input,
-            span {
-                vertical-align: middle;
-            }
     
-            .check-input {
-                margin-right: .6rem;
+    .label-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        .label-wrapper {
+            margin: 1rem;
+            
+            .label {
+                .check-input,
+                span {
+                    vertical-align: middle;
+                }
+        
+                .check-input {
+                    margin-right: .6rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(-100%);
+        background: $white;
+        font-size: 1.4rem;
+        box-shadow: 0 0 4px 4px rgba($gray, .1);
+        transition: .2s;
+
+        &::before {
+            content: 'FILTERS';
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            display: block;
+            background: $highlight1;
+            box-shadow: 0 0 4px 4px rgba($gray, .1);
+            color: $white;
+            text-align: center;
+            font-size: 1.8rem;
+            padding: 1rem 0;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        &.active {
+            transform: translateY(0%);
+        }
+
+        &:hover {
+            &::before {
+                transition: .2s;
+                background: darken($highlight1, $amount: 10%);
+            }
+        }
+
+        .form {
+            padding: 1rem;
+            
+            .filter-name {
+                margin: 1rem 0 0.4rem 0;
             }
         }
     }
