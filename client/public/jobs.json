@@ -2,7 +2,7 @@
     "jobs": [
         {
             "id": 1,
-            "name": "Company name",
+            "name": "Company name 1",
             "location": "New York",
             "position": "Front End Developer",
             "norm": "Full Time"
@@ -16,28 +16,28 @@
         },
         {
             "id": 3,
-            "name": "Company name",
+            "name": "Company name 2",
             "location": "California",
             "position": "Dev Ops",
             "norm": "Full Time"
         },
         {
             "id": 4,
-            "name": "Company name",
+            "name": "Company name 2",
             "location": "Texas",
             "position": "Web Designer",
             "norm": "Full Time"
         },
         {
             "id": 5,
-            "name": "Company name",
+            "name": "Company name 3",
             "location": "New York",
             "position": "Back End Developer",
             "norm": "Full Time"
         },
         {
             "id": 6,
-            "name": "Company name",
+            "name": "Company name 3",
             "location": "California",
             "position": "Front End Developer",
             "norm": "Part Time"
