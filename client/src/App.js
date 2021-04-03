@@ -7,8 +7,10 @@ import List from './components/list/List';
 import React, { useEffect, useState, useRef } from "react"
 
 function App() {
-  const [jobs, setJobs] = useState([])
-  const menuComponent = useRef();
+  const [initialJobs, setInitialJobs] = useState([]),
+        [jobs, setJobs] = useState([]),
+        menuComponent = useRef(),
+        searchInput = useRef();
 
   useEffect(() => {
     const api = 'jobs.json';
@@ -16,8 +18,26 @@ function App() {
     fetch(api)
       .then(response => response.json())
       .then(json => {
+        setInitialJobs([...json.jobs])
         setJobs([...json.jobs])
       })
+}, [])
+  
+  const submitSerach = (e) => {
+    e.preventDefault();
+
+    if(!searchInput.current.value.toLowerCase()) {
+      setJobs(initialJobs);
+      return;
+    }
+
+    const jobsClone = initialJobs.filter(job => job.name.toLowerCase() === searchInput.current.value.toLowerCase())  
+
+    setJobs(jobsClone)
+  }
+
+  useEffect(() => {
+    menuComponent.current.addEventListener('click', () => toggleMenu())
   }, [])
 
   const toggleMenu = () => {
@@ -28,10 +48,6 @@ function App() {
     }
   }
 
-  useEffect(() => {
-    menuComponent.current.addEventListener('click', () => toggleMenu())
-  }, [])
-
   return (
     <div className="app theme">
       <div className="container">
@@ -40,8 +56,8 @@ function App() {
           <div className="hero-component">
             <form action="" id="search" className="search-component">
               <div className="icon"></div>
-              <input type="text" name="" id="" className="input" placeholder="Title, companies, expertise or benefits"/>
-              <button type="submit" className="button">Search</button>
+              <input type="text" name="" id="" className="input" placeholder="Title, companies, expertise or benefits" ref={searchInput}/>
+              <button type="submit" className="button" onClick={submitSerach}>Search</button>
             </form>
           </div>
           <section className="main-structure">
